@@ -1,0 +1,20 @@
+{
+  "name": "operating-system-demo",
+  "version": "1.0.0",
+  "description": "Interactive educational platform for operating system principles",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "test": "echo \"Tests will be added in future phases\" && exit 0"
+  },
+  "keywords": ["operating-system", "education", "simulation", "react", "node"],
+  "author": "guangliangyang",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
