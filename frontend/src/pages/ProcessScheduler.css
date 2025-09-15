@@ -1,0 +1,182 @@
+.scheduler-container {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.scheduler-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.scheduler-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.algorithm-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.algorithm-option {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.algorithm-option:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+}
+
+.algorithm-option label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  margin: 0;
+}
+
+.algorithm-option input[type="radio"] {
+  margin: 0;
+}
+
+.algorithm-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.algorithm-info strong {
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.algorithm-info span {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.algorithm-option:has(input:checked) {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+}
+
+.time-quantum {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.time-quantum label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.time-quantum input {
+  width: 80px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.process-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.process-list th,
+.process-list td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.process-list th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+}
+
+.process-list tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.comparison-item {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.comparison-item h4 {
+  margin: 0 0 0.75rem 0;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.metrics-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.metrics-summary div {
+  color: #495057;
+}
+
+@media (max-width: 1024px) {
+  .scheduler-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .scheduler-controls {
+    order: 2;
+  }
+
+  .scheduler-results {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-list {
+    overflow-x: auto;
+  }
+
+  .process-list table {
+    min-width: 500px;
+  }
+}

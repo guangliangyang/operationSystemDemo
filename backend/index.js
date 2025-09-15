@@ -2,6 +2,12 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
+// Import route modules
+const processRoutes = require('./api/processRoutes');
+const memoryRoutes = require('./api/memoryRoutes');
+const fileSystemRoutes = require('./api/fileSystemRoutes');
+const ioRoutes = require('./api/ioRoutes');
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -29,22 +35,11 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-// API routes placeholder
-app.get('/api/processes', (req, res) => {
-  res.json({ message: 'Process scheduling endpoints coming soon' });
-});
-
-app.get('/api/memory', (req, res) => {
-  res.json({ message: 'Memory management endpoints coming soon' });
-});
-
-app.get('/api/filesystem', (req, res) => {
-  res.json({ message: 'File system endpoints coming soon' });
-});
-
-app.get('/api/io', (req, res) => {
-  res.json({ message: 'I/O management endpoints coming soon' });
-});
+// API routes
+app.use('/api/processes', processRoutes);
+app.use('/api/memory', memoryRoutes);
+app.use('/api/filesystem', fileSystemRoutes);
+app.use('/api/io', ioRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

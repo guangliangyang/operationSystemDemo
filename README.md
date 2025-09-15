@@ -33,8 +33,8 @@ operating-system-demo/
 ## Development Phases
 
 - [x] Phase 0: Project setup and planning
-- [ ] Phase 1: Foundation (2-3 weeks)
-- [ ] Phase 2: Core Modules (4-5 weeks)
+- [x] Phase 1: Foundation (2-3 weeks)
+- [x] Phase 2: Core Modules (4-5 weeks)
 - [ ] Phase 3: Advanced Features (3-4 weeks)
 - [ ] Phase 4: Polish & Documentation (2 weeks)
 

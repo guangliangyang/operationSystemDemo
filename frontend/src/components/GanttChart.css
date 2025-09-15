@@ -1,0 +1,77 @@
+.gantt-chart {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.gantt-chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.gantt-legend {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.gantt-legend h4 {
+  margin: 0 0 0.75rem 0;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.legend-item span {
+  font-size: 0.875rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+.bar {
+  transition: opacity 0.3s ease;
+}
+
+.bar:hover {
+  opacity: 1 !important;
+  stroke-width: 2;
+}
+
+@media (max-width: 768px) {
+  .gantt-chart svg {
+    width: 100%;
+    min-width: 600px;
+  }
+
+  .gantt-chart {
+    overflow-x: auto;
+  }
+
+  .legend-items {
+    gap: 0.5rem;
+  }
+
+  .legend-item span {
+    font-size: 0.75rem;
+  }
+}
